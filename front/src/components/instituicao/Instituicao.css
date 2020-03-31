@@ -1,0 +1,42 @@
+.instituicao-nome {
+    display: block;
+    font-size: 16px !important;
+    color: #4f4f4f !important;
+    font-weight: 400 !important;
+    margin-bottom: -0.5vh !important;
+}
+
+.instituicao-aberta {
+    color: #598f2c;
+    display: block;
+    font-weight: 400 !important;
+}
+
+.instituicao-fechada {
+    color: #a8a8a8;
+    display: block;
+    font-weight: 400 !important;
+}
+
+.distancia {
+    color: #aeaeae;
+    display: block;
+    margin-top: -0.5vh !important;
+    font-weight: 300 !important;
+}
+
+.modal-instituicao {
+    border-radius: 20px 20px 0 0;
+    margin-top: 30vh;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.conteudo-modal-instituicao {
+    border-radius: 20px;
+}
+
+.seta {
+    margin: auto;
+}

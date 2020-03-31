@@ -1,0 +1,20 @@
+.containerTotal {
+    width: 100%;
+    color: #313131;
+    justify-content: center;
+}
+
+.horarios {
+    font-weight: bold !important;
+    padding-bottom: 5%;
+}
+
+.dia{
+    font-size: 12px;
+    height: 25px;
+}
+
+.tituloContainer{
+    display:flex;
+    justify-content: center;
+}
