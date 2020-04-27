@@ -23,7 +23,8 @@ class MapView extends Component {
 
   async componentDidMount() {
     const listaInstituicoes = await this.instituicaoService.listaInstituicoes();
-    this.setState({ defaultMarks: listaInstituicoes });
+    console.log(listaInstituicoes, "erro")
+    // this.setState({ defaultMarks: listaInstituicoes });
   }
 
   onMarkerClick = (props, marker) =>
@@ -102,5 +103,5 @@ class MapView extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDvHSPp_Ov4xxoCtR7Rd1299bQ8hQYSWRI'
+  apiKey: 'AIzaSyCjQFC1GtkFyGcBUpFDDmqU40IzFUz4if8'
 })(MapView);

@@ -37,4 +37,5 @@ app.use('/api/v1/autenticacao', autenticacaoRouter);
 app.use('/api/v1/instituicao', institutionRouter);
 app.use('/api/v1/itinerario', itinerarioRouter);
 
+
 module.exports = app;

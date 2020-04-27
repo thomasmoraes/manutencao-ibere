@@ -6,7 +6,7 @@ const URLS = {
 };
 
 const config = {
-  server: URLS.HML
+  server: URLS.LOCAL
 };
 
 export { URLS, config };

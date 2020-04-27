@@ -11,7 +11,7 @@ import { ItinerarioCreate } from '../admin/itinerarios/create';
 import { ItinerarioEdit } from '../admin/itinerarios/edit';
 
 const dataProvider = jsonServerProvider(
-  'http://www.hml.ages.pucrs.br:4301/api/v1'
+  'http://localhost:3000/api/v1'
 );
 
 export class TelaLogin extends Component {
