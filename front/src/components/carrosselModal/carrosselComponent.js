@@ -23,7 +23,7 @@ class CarouselComponent extends React.Component {
 
   render() {
     return (
-      <AliceCarousel buttonsDisabled dotsDisabled responsive={this.responsive}>
+      <AliceCarousel buttonsDisabled responsive={this.responsive}>
         {this.loadImages()}
       </AliceCarousel>
     );

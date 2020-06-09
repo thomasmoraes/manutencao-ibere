@@ -57,6 +57,10 @@ class DetalheInstituicaoContainer extends Component {
                   <Typography variant="subtitle1">
                     {this.state.instituicao.endereco}
                   </Typography>
+                  <Typography>
+                    {`Tempo médio de visitação: ${this.state.instituicao.tempoVisita} minutos`}
+                  </Typography>
+
                   {this.state.instituicao.aberto ? (
                     <Typography
                       variant="subtitle2"
@@ -65,14 +69,14 @@ class DetalheInstituicaoContainer extends Component {
                       Aberto
                     </Typography>
                   ) : (
-                    <Typography
-                      variant="subtitle2"
-                      className="instituicao-fechada"
-                      style={{ color: 'red' }}
-                    >
-                      Fechado
-                    </Typography>
-                  )}
+                      <Typography
+                        variant="subtitle2"
+                        className="instituicao-fechada"
+                        style={{ color: 'red' }}
+                      >
+                        Fechado
+                      </Typography>
+                    )}
                 </Grid>
                 <Grid
                   container
@@ -138,8 +142,8 @@ class DetalheInstituicaoContainer extends Component {
                       <b>Email:</b> {this.state.instituicao.email}
                     </Typography>
                   ) : (
-                    ''
-                  )}
+                      ''
+                    )}
 
                   <Typography variant="body2">
                     <b>Telefone:</b> {this.state.instituicao.telefone}
@@ -150,8 +154,8 @@ class DetalheInstituicaoContainer extends Component {
                       redes={this.state.instituicao.redes}
                     />
                   ) : (
-                    ''
-                  )}
+                      ''
+                    )}
                 </Grid>
 
                 <Grid>
@@ -161,8 +165,8 @@ class DetalheInstituicaoContainer extends Component {
                         <b>Observações:</b> {this.state.instituicao.observacoes}
                       </Typography>
                     ) : (
-                      ''
-                    )}
+                        ''
+                      )}
                   </Grid>
                 </Grid>
 

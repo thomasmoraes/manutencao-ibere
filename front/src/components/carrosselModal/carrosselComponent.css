@@ -1,8 +1,9 @@
 .imagem {
-    width: 100%;
+    max-width: 100%;
+    height: 50vh;
 }
 
 .alice-carousel__stage-item {
-    max-height: 250px;
+    height: 50vh;
     padding-left: 6%;
 }

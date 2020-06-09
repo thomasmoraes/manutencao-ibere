@@ -24,7 +24,7 @@ class MapView extends Component {
   async componentDidMount() {
     const listaInstituicoes = await this.instituicaoService.listaInstituicoes();
     console.log(listaInstituicoes, "erro")
-    // this.setState({ defaultMarks: listaInstituicoes });
+    this.setState({ defaultMarks: listaInstituicoes });
   }
 
   onMarkerClick = (props, marker) =>
@@ -46,6 +46,9 @@ class MapView extends Component {
   render() {
     return (
       <Grid>
+        {/* {this.setState.defaultMarks.map((mark)=>{
+          return
+        })} */}
         <CurrentLocation centerAroundCurrentLocation google={this.props.google}>
           <Marker onClick={this.onMarkerClick} name={'Localização atual'} />
 
