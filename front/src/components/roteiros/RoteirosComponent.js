@@ -17,18 +17,26 @@ import MapIcon from '../../assets/icons/map_icon.svg';
 import './roteiros.css';
 import RoteiroService from '../../services/RoteiroService';
 import InstituicaoRoteiro from '../instituicaoRoteiro/InstituicaoRoteiro';
+import FormRoteiro from '../formRoteiro'
 
 export class Roteiros extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
-
+    this.state = {modal: false};
     this.roteirosService = new RoteiroService();
   }
 
   handleClick = e => {
-    this.setState({ [e]: !this.state[e] });
+    this.setState({...this.state, [e]: !this.state[e] });
+  };
+
+  openModal = () => {
+    this.setState({...this.state, modal: true})
+  };
+
+  closeModal = () => {
+    this.setState({...this.state, modal: false})
   };
 
   render() {
@@ -36,11 +44,15 @@ export class Roteiros extends Component {
     if (roteiros !== undefined) {
       return (
         <List>
+          <Button variant="outlined" onClick={this.openModal}>
+                        +
+          </Button>
           {roteiros.map(roteiro => {
             return (
               <React.Fragment key={roteiro.id}>
                 {roteiro != null ? (
                   <React.Fragment>
+
                     <ListItem
                       button
                       onClick={this.handleClick.bind(this, roteiro.nome)}
@@ -90,6 +102,13 @@ export class Roteiros extends Component {
                     <ListItemText primary={roteiro.name} />
                   </ListItem>
                 )}
+                {this.state.modal &&
+                 <div className="try-modal-overlay">
+                    <div className="modal">
+                      <FormRoteiro closeModal={this.closeModal}/>
+                     </div>
+                  </div>
+          }
               </React.Fragment>
             );
           })}

@@ -63,8 +63,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
-  
+    
     width: 40%;
     color: #565656;
   
@@ -73,4 +72,9 @@
 
 .input:focus {
     border-bottom: 1px solid #ff6600;
+}
+
+.titleModal{
+    padding-top: 15px;
+    text-align: center;
 }

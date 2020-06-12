@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeView from './views/home/HomeView';
+import Modal from '@material-ui/core/Modal';
 
 function App() {
   return (
